@@ -49,7 +49,7 @@ public class BancoDados {
 	public static void listarInstrutor() {
 		boolean estaVazia = instrutores.isEmpty();
 		if (estaVazia) {
-			System.out.println("Está vazio");
+			System.out.println("Estï¿½ vazio");
 		}
 		int indice = 0;
 		for (Instrutor instrutor : instrutores) {
@@ -65,7 +65,7 @@ public class BancoDados {
 			instrutores.remove(indice);
 			System.out.println("O " + nomeInstrutorRemovido + " foi deletado!!");
 		} else {
-			System.out.println("Algum dos dados não foi informado corretamente");
+			System.out.println("Algum dos dados nï¿½o foi informado corretamente");
 		}
 	}
 
@@ -77,14 +77,14 @@ public class BancoDados {
 		}
 	}
 
-	public static void deletaCurso(int indice) {
+	public static void deletarCurso(int indice) {
 		String nomeCursoRemovido = "";
 		if (indice != -1) {
 			nomeCursoRemovido = cursos.get(indice).getNome();
 			cursos.remove(indice);
 			System.out.println("O " + nomeCursoRemovido + " foi deletado!!");
 		} else {
-			System.out.println("Algum dos dados não foi informado corretamente");
+			System.out.println("Algum dos dados nï¿½o foi informado corretamente");
 		}
 	}
 
@@ -127,7 +127,7 @@ public class BancoDados {
 	public static void listarAluno() {
 		boolean estaVazio = alunos.isEmpty();
 		if(estaVazio) {
-			System.out.println("Está Vazio");
+			System.out.println("Estï¿½ Vazio");
 		}
 		int indice = 0;
 		for (Aluno aluno : alunos) {
@@ -143,7 +143,7 @@ public class BancoDados {
 			alunos.remove(indice);
 			System.out.println("O " + nomeAlunoRemovido + " foi deletado!!");
 		} else {
-			System.out.println("Algum dos dados não foi informado corretamente");
+			System.out.println("Algum dos dados nï¿½o foi informado corretamente");
 		}
 	}
 	public static void atualizarAluno(int indice, String nome, String cpf) {

@@ -31,7 +31,7 @@ public class Tela {
 		exibirMsg("<11> Remover Aluno");
 		exibirMsg("<12> Atualizar Aluno");
 		exibirMsg("<13> Adiciona Aluno ao Curso");
-		exibirMsg("Escolha a opção: ");
+		exibirMsg("Escolha a opï¿½ï¿½o: ");
 		opcao = ler.nextLine();
 
 		if (opcao.equals("1")) {
@@ -43,14 +43,14 @@ public class Tela {
 		} else if (opcao.equals("4")) {
 			listarCurso();
 		} else if (opcao.equals("5")) {
-			deletaCurso();
+			deletarCurso();
 		}else if(opcao.equals("6")) {
 			atualizarCurso();
 		}else if (opcao.equals("7")) {
 			listarInstrutor();
 		}
 		else if (opcao.equals("8")) {
-			deletaInstrutor();
+			deletarInstrutor();
 		}else if (opcao.equals("9")) {
 			atualizarInstrutor();
 		}else if(opcao.equals("10")) {
@@ -90,18 +90,18 @@ public class Tela {
 		banco.listarCurso();
 	}
 
-	private void deletaCurso() {
+	private void deletarCurso() {
 		banco.listarCurso();
 		Scanner lerIndice = new Scanner(System.in);
-		System.out.println("Digite o código do curso a ser excluido: ");
+		System.out.println("Digite o cï¿½digo do curso a ser excluido: ");
 		int indice = lerIndice.nextInt();
-		banco.deletaCurso(indice);
+		banco.deletarCurso(indice);
 	}
 
 	private void atualizarCurso() {
 		banco.listarCurso();
 		Scanner lerInfo = new Scanner(System.in);
-		System.out.println("Digite o código do curso para atualizar: ");
+		System.out.println("Digite o cï¿½digo do curso para atualizar: ");
 		String indiceTemp = lerInfo.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Curso: ");
@@ -122,10 +122,10 @@ public class Tela {
 		banco.cadastrarInstrutor(nome, cpf);
 	}
 
-	private void deletaInstrutor() {
+	private void deletarInstrutor() {
 		banco.listarInstrutor();
 		Scanner lerInfo = new Scanner(System.in);
-		System.out.println("Digite o código de Instrutor para remove-lo: ");
+		System.out.println("Digite o cï¿½digo de Instrutor para remove-lo: ");
 		int indice = lerInfo.nextInt();
 		banco.deletarInstrutor(indice);
 	}
@@ -137,7 +137,7 @@ public class Tela {
 	private void atualizarInstrutor() {
 		banco.listarCurso();
 		Scanner lerInfo = new Scanner(System.in);
-		System.out.println("Digite o código do curso para atualizar: ");
+		System.out.println("Digite o cï¿½digo do curso para atualizar: ");
 		String indiceTemp = lerInfo.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Curso: ");
@@ -164,14 +164,14 @@ public class Tela {
 	private void removerAluno() {
 		banco.listarAluno();
 		Scanner lerInfo = new Scanner(System.in);
-		System.out.println("Digite o código o Aluno para remove-lo: ");
+		System.out.println("Digite o cï¿½digo o Aluno para remove-lo: ");
 		int indice = lerInfo.nextInt();
 		banco.removerAluno(indice);
 	}
 	private void atualizarAluno() {
 		banco.listarCurso();
 		Scanner lerInfo = new Scanner(System.in);
-		System.out.println("Digite o código do aluno para atualizar: ");
+		System.out.println("Digite o cï¿½digo do aluno para atualizar: ");
 		String indiceTemp = lerInfo.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Aluno: ");
@@ -184,9 +184,9 @@ public class Tela {
 		banco.listarCurso();
 		banco.listarAluno();
 		Scanner lerIndice = new Scanner(System.in);
-		System.out.println("Digite o índice do Curso: ");
+		System.out.println("Digite o ï¿½ndice do Curso: ");
 		int indiceCurso = lerIndice.nextInt();
-		System.out.println("Digite o ídice do Aluno: ");
+		System.out.println("Digite o ï¿½dice do Aluno: ");
 		int indiceAluno = lerIndice.nextInt();
 		banco.salvarAlunoEmCurso(indiceCurso, indiceAluno);
 		//cursos.listaAlunosDoCurso();
