@@ -12,7 +12,7 @@ public class Curso {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cargaHoraria = cargaHoraria;
-		alunos = new ArrayList<Aluno>();
+		this.alunos = new ArrayList<Aluno>();
 	}
 
 	public int getCodigo() {
@@ -46,6 +46,4 @@ public class Curso {
 	public void setAlunos(ArrayList<Aluno> alunos) {
 		this.alunos = alunos;
 	}
-
-
 }

@@ -8,12 +8,9 @@ public class Instrutor extends Pessoa{
 		this.senha = senha;
 	}
 	
-	
 	public Instrutor(String nome, String cpf) {
 		super(nome, cpf);
-
 	}
-
 
 	public String getSenha() {
 		return senha;

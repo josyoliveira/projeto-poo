@@ -7,9 +7,7 @@ public class Aluno extends Pessoa{
 	public Aluno(String matricula, String nome, String cpf) {
 		super(nome, cpf);
 		this.matricula = matricula;
-
 	}
-	
 	
 	public String getMatricula() {
 		return matricula;
