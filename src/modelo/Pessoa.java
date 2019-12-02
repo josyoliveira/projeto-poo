@@ -5,7 +5,6 @@ public abstract class Pessoa {
 	private String cpf;
 
 	public Pessoa(String nome, String cpf) {
-		super();
 		this.nome = nome;
 		this.cpf = cpf;
 	}

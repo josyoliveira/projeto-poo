@@ -3,16 +3,14 @@ package Tela;
 import java.util.Scanner;
 
 import modelo.BancoDados;
-import modelo.Curso;
 
 public class Tela {
 
-	private Scanner ler = new Scanner(System.in);
-	private BancoDados banco;
-	private Curso cursos;
+	private Scanner lerOpcao = new Scanner(System.in);
+	private BancoDados bancoDeDados;
 
 	public Tela() {
-		banco = new BancoDados();
+		bancoDeDados = new BancoDados();
 	}
 
 	public void menu() {
@@ -32,7 +30,7 @@ public class Tela {
 		exibirMsg("<12> Atualizar Aluno");
 		exibirMsg("<13> Adiciona Aluno ao Curso");
 		exibirMsg("Escolha a op��o: ");
-		opcao = ler.nextLine();
+		opcao = lerOpcao.nextLine();
 
 		if (opcao.equals("1")) {
 			menuCadastrarCurso();
@@ -72,124 +70,123 @@ public class Tela {
 
 	private void menuCadastrarCurso() {
 
-		Scanner lerInfo = new Scanner(System.in);
+		Scanner lerDados = new Scanner(System.in);
 
 		System.out.println("Digite o codigo: ");
-		String codigoTemp = lerInfo.nextLine();
+		String codigoTemp = lerDados.nextLine();
 		int codigo = Integer.parseInt(codigoTemp);
 		System.out.println("Digite o nome: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite a carga horaria: ");
-		String cargaHorariaTemp = lerInfo.nextLine();
+		String cargaHorariaTemp = lerDados.nextLine();
 		int cargaHoraria = Integer.parseInt(cargaHorariaTemp);
 
-		banco.cadastrarCurso(codigo, nome, cargaHoraria);
+		bancoDeDados.cadastrarCurso(codigo, nome, cargaHoraria);
 	}
 
 	private void listarCurso() {
-		banco.listarCurso();
+		bancoDeDados.listarCurso();
 	}
 
 	private void deletarCurso() {
-		banco.listarCurso();
+		bancoDeDados.listarCurso();
 		Scanner lerIndice = new Scanner(System.in);
 		System.out.println("Digite o c�digo do curso a ser excluido: ");
 		int indice = lerIndice.nextInt();
-		banco.deletarCurso(indice);
+		bancoDeDados.deletarCurso(indice);
 	}
 
 	private void atualizarCurso() {
-		banco.listarCurso();
-		Scanner lerInfo = new Scanner(System.in);
+		bancoDeDados.listarCurso();
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite o c�digo do curso para atualizar: ");
-		String indiceTemp = lerInfo.nextLine();
+		String indiceTemp = lerDados.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Curso: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite a carga horaria do Curso: ");
-		String cargaHorariaTemp = lerInfo.nextLine();
+		String cargaHorariaTemp = lerDados.nextLine();
 		int cargaHoraria = Integer.parseInt(cargaHorariaTemp);
-		banco.atualizarCurso(indice, nome, cargaHoraria);
+		bancoDeDados.atualizarCurso(indice, nome, cargaHoraria);
 	}
 
 	private void cadastrarInstrutor() {
-		Scanner lerInfo = new Scanner(System.in);
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite seu Nome: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite seu CPF: ");
-		String cpf = lerInfo.nextLine();
+		String cpf = lerDados.nextLine();
 
-		banco.cadastrarInstrutor(nome, cpf);
+		bancoDeDados.cadastrarInstrutor(nome, cpf);
 	}
 
 	private void deletarInstrutor() {
-		banco.listarInstrutor();
-		Scanner lerInfo = new Scanner(System.in);
+		bancoDeDados.listarInstrutor();
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite o c�digo de Instrutor para remove-lo: ");
-		int indice = lerInfo.nextInt();
-		banco.deletarInstrutor(indice);
+		int indice = lerDados.nextInt();
+		bancoDeDados.deletarInstrutor(indice);
 	}
 
 	private void listarInstrutor() {
-		banco.listarInstrutor();
+		bancoDeDados.listarInstrutor();
 	}
 
 	private void atualizarInstrutor() {
-		banco.listarCurso();
-		Scanner lerInfo = new Scanner(System.in);
+		bancoDeDados.listarCurso();
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite o c�digo do curso para atualizar: ");
-		String indiceTemp = lerInfo.nextLine();
+		String indiceTemp = lerDados.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Curso: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite o CPF do Instrutor: ");
-		String cpf = lerInfo.nextLine();
+		String cpf = lerDados.nextLine();
 
-		banco.atualizarInstrutor(indice, nome, cpf);
+		bancoDeDados.atualizarInstrutor(indice, nome, cpf);
 	}
 	private void cadastrarAluno() {
-		Scanner lerInfo = new Scanner(System.in);
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite sua Matricula: ");
-		String matricula = lerInfo.nextLine();
+		String matricula = lerDados.nextLine();
 		System.out.println("Digite seu nome: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite seu CPF: ");
-		String cpf = lerInfo.nextLine();
+		String cpf = lerDados.nextLine();
 
-		banco.cadastrarAluno(matricula, nome, cpf);
+		bancoDeDados.cadastrarAluno(matricula, nome, cpf);
 	}
 	private void listarAluno() {
-		banco.listarAluno();
+		bancoDeDados.listarAluno();
 	}
 	private void removerAluno() {
-		banco.listarAluno();
-		Scanner lerInfo = new Scanner(System.in);
+		bancoDeDados.listarAluno();
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite o c�digo o Aluno para remove-lo: ");
-		int indice = lerInfo.nextInt();
-		banco.removerAluno(indice);
+		int indice = lerDados.nextInt();
+		bancoDeDados.removerAluno(indice);
 	}
 	private void atualizarAluno() {
-		banco.listarCurso();
-		Scanner lerInfo = new Scanner(System.in);
+		bancoDeDados.listarCurso();
+		Scanner lerDados = new Scanner(System.in);
 		System.out.println("Digite o c�digo do aluno para atualizar: ");
-		String indiceTemp = lerInfo.nextLine();
+		String indiceTemp = lerDados.nextLine();
 		int indice = Integer.parseInt(indiceTemp);
 		System.out.println("Digite o nome do Aluno: ");
-		String nome = lerInfo.nextLine();
+		String nome = lerDados.nextLine();
 		System.out.println("Digite o CPF do Aluno: ");
-		String cpf = lerInfo.nextLine();
-		banco.atualizarAluno(indice, nome, cpf);
+		String cpf = lerDados.nextLine();
+		bancoDeDados.atualizarAluno(indice, nome, cpf);
 	}
 	private void adicionarAlunoAoCurso() {
-		banco.listarCurso();
-		banco.listarAluno();
+		bancoDeDados.listarCurso();
+		bancoDeDados.listarAluno();
 		Scanner lerIndice = new Scanner(System.in);
 		System.out.println("Digite o �ndice do Curso: ");
 		int indiceCurso = lerIndice.nextInt();
 		System.out.println("Digite o �dice do Aluno: ");
 		int indiceAluno = lerIndice.nextInt();
-		banco.salvarAlunoEmCurso(indiceCurso, indiceAluno);
-		//cursos.listaAlunosDoCurso();
+		bancoDeDados.salvarAlunoEmCurso(indiceCurso, indiceAluno);
 	}
 
 }

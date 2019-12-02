@@ -6,13 +6,13 @@ public class Curso {
 	private int codigo;
 	private String nome;
 	private int cargaHoraria;
-	private ArrayList<Aluno> alunos;
+	private ArrayList<Aluno> aluno;
 
 	public Curso(int codigo, String nome, int cargaHoraria) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cargaHoraria = cargaHoraria;
-		this.alunos = new ArrayList<Aluno>();
+		this.aluno = new ArrayList<Aluno>();
 	}
 
 	public int getCodigo() {
@@ -40,10 +40,10 @@ public class Curso {
 	}
 
 	public ArrayList<Aluno> getAlunos() {
-		return alunos;
+		return aluno;
 	}
 
 	public void setAlunos(ArrayList<Aluno> alunos) {
-		this.alunos = alunos;
+		this.aluno = alunos;
 	}
 }

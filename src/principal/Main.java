@@ -1,7 +1,5 @@
 package principal;
 
-import java.util.Scanner;
-
 import Tela.Tela;
 
 public class Main {
